@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 60%;
+}
+
+h1{
+    font-family: 'Georgia';
+    font-size: 80px;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#myButton{
+    height: fit-content;
+    padding: 20px;
+    width: 40%;
+    display: flex;
+    margin-top: 50vh;
+}
+#shape{
+    width: 60px;
+    height: 60px;
+    border-radius: 500px;
+    border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
+}
