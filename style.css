@@ -18,16 +18,19 @@ section{
     align-items: center;
     justify-content: center;
 }
-#myButton{
-    height: fit-content;
-    padding: 20px;
-    width: 40%;
-    display: flex;
-    margin-top: 50vh;
-}
+
 #shape{
     width: 60px;
     height: 60px;
     border-radius: 500px;
     border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
 }
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
