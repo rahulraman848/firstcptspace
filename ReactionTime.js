@@ -24,8 +24,8 @@ function doIt() {
     let countdown = setInterval(clock, 1000);
 
     function clock() {
-      let topVal = getRandValue(0, window.outerHeight);
-      let leftVal = getRandValue(0, window.outerWidth);
+      let topVal = getRandValue(-(window.innerHeight), window.innerHeight);
+      let leftVal = getRandValue(-window.innerHeight, window.innerWidth);
       seconds--;
       time.innerHTML = seconds;
       if (seconds == 0) {

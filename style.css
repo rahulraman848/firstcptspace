@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+#myButton{
+    box-shadow: 7px 12px 12px 7px rgba(17, 17, 26, 0.18);
+    font-family: "Georgia";
+}
+
 body{
     min-height: 60%;
 }
