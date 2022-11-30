@@ -8,9 +8,11 @@ playAgain.style.visibility = "hidden";
 let reactionTimes = [];
 let attempts = 0;
 let sum = 0;
+let instructions = document.getElementById('instructions');
 
 function remove() {
   button.style.display = "none";
+  instructions.style.display = "none";
 }
 
 function doIt() {
