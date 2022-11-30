@@ -25,7 +25,7 @@ function doIt() {
 
     function clock() {
       let topVal = getRandValue(-(window.innerHeight), window.innerHeight);
-      let leftVal = getRandValue(-window.innerHeight, window.innerWidth);
+      let leftVal = getRandValue(-(window.innerHeight), window.innerWidth);
       seconds--;
       time.innerHTML = seconds;
       if (seconds == 0) {
