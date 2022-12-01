@@ -49,7 +49,7 @@ section{
     width: 60px;
     height: 60px;
     border-radius: 500px;
-    border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
+    border-color: rgb(244, 121, 8) lightgreen darkblue cyan;
 }
 .center {
     margin: 0;
@@ -59,3 +59,5 @@ section{
     -ms-transform: translate(-50%, -50%); /* microsoft machines */
     transform: translate(-50%, -50%);
 }
+
+#playAgain
