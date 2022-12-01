@@ -60,4 +60,10 @@ section{
     transform: translate(-50%, -50%);
 }
 
-#playAgain
+#playAgain{
+    font-size: 50px;
+    font-family: Arial;
+    background-color: rgb(255, 0, 149);
+
+
+}
