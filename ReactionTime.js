@@ -9,6 +9,7 @@ let reactionTimes = [];
 let attempts = 0;
 let sum = 0;
 let instructions = document.getElementById('instructions');
+const finalTime = document.getElementById("results");
 
 function remove() {
   button.style.display = "none";
@@ -49,13 +50,11 @@ function doIt() {
     for (let i = 0; i < reactionTimes.length; i++) {
       sum += reactionTimes[i];
     }
-    document.write(
-      "Your 5 scores were " +
-        reactionTimes +
-        "<br> <br> Your average time is " +
-        sum / 5 +
-        " ms"
-    );
+    localStorage.setItem("averageTime", Math.trunc(sum/5, 1));
+    const resultMessage = `Your average reaction time is ${localStorage.getItem("averageTime")/5} ms.`;
+    playAgain.style.visibility = "hidden";
+    finalTime.innerHTML = resultMessage;
+    finalTime.style.fontFamily = "Georgia";
   }
 }
 function getRandValue(min, max) {
