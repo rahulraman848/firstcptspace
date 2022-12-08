@@ -50,8 +50,7 @@ function doIt() {
     for (let i = 0; i < reactionTimes.length; i++) {
       sum += reactionTimes[i];
     }
-    localStorage.setItem("averageTime", Math.trunc(sum/5, 1));
-    const resultMessage = `Your average reaction time is ${localStorage.getItem("averageTime")/5} ms.`;
+    const resultMessage = `Your average reaction time is ${Math.trunc(sum/5)} ms.`;
     playAgain.style.visibility = "hidden";
     finalTime.innerHTML = resultMessage;
     finalTime.style.fontFamily = "Georgia";
