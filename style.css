@@ -1,9 +1,95 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-#myButton{
+#myButton {
+  box-shadow: 2px 2px 2px 2px rgba(17, 17, 26, 0.18);
+  font-family: "Georgia";
+  margin-top: 200px;
+  background-color: rgb(220, 220, 225);
+  border: 2px double;
+  border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
+  padding: 10px;
+  scale: 125%;
+}
+
+#myButton:hover {
+  background-color: ghostwhite;
+  border: 2px double;
+  transition: 0.5s;
+}
+
+body {
+  min-height: 60%;
+  background-image: url("bg.jpeg");
+}
+
+#instructions {
+  width: 70%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%); /* microsoft machines */
+  transform: translate(-50%, -50%);
+  margin-top: -70px;
+  font-size: 135%;
+}
+
+h1 {
+  font-family: "Georgia";
+  font-size: 80px;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#shape {
+  width: 60px;
+  height: 60px;
+  border-radius: 500px;
+  border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%); /* microsoft machines */
+  transform: translate(-50%, -50%);
+}
+
+#table {
+  position: absolute;
+  margin-bottom: 500px;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%); /* microsoft machines */
+  transform: translate(-50%, -50%);
+}
+
+#playAgain {
+  box-shadow: 2px 2px 2px 2px rgba(17, 17, 26, 0.18);
+  font-family: "Georgia";
+  background-color: rgb(220, 220, 225);
+  border: 2px double;
+  border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
+  padding: 10px;
+  scale: 125%;
+}
+#playAgain:hover {
+  background-color: ghostwhite;
+  border: 2px double;
+}
+#restart {
     box-shadow: 2px 2px 2px 2px rgba(17, 17, 26, 0.18);
     font-family: "Georgia";
     margin-top: 200px;
@@ -12,67 +98,10 @@
     border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
     padding: 10px;
     scale: 125%;
-}
-
-#myButton:hover{
+  }
+  
+#restart:hover {
     background-color: ghostwhite;
     border: 2px double;
     transition: 0.5s;
-}
-
-body{
-    min-height: 60%;
-    background-image: url('bg.jpeg');
-}
-
-#instructions{
-    width: 70%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%); /* microsoft machines */
-    transform: translate(-50%, -50%);
-    margin-top: -70px;
-    font-size: 135%;
-}
-
-h1{
-    font-family: 'Georgia';
-    font-size: 80px;
-}
-section{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#shape{
-    width: 60px;
-    height: 60px;
-    border-radius: 500px;
-    border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
-}
-.center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%); /* microsoft machines */
-    transform: translate(-50%, -50%);
-}
-#playAgain{
-    box-shadow: 2px 2px 2px 2px rgba(17, 17, 26, 0.18);
-    font-family: "Georgia";
-    background-color: rgb(220, 220, 225);
-    border: 2px double;
-    border-color: rgb(244, 121, 7) lightgreen darkblue cyan;
-    padding: 10px;
-    scale: 125%;
-}
-#playAgain:hover{
-    background-color: ghostwhite;
-    border: 2px double;
-}
+  }

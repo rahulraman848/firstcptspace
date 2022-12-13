@@ -8,8 +8,12 @@ playAgain.style.visibility = "hidden";
 let reactionTimes = [];
 let attempts = 0;
 let sum = 0;
-let instructions = document.getElementById('instructions');
+let instructions = document.getElementById("instructions");
 const finalTime = document.getElementById("results");
+const table = document.getElementById("table");
+table.style.display = "none";
+const restart = document.getElementById("restart");
+restart.style.display = "none";
 
 function remove() {
   button.style.display = "none";
@@ -27,8 +31,8 @@ function doIt() {
     let countdown = setInterval(clock, 1000);
 
     function clock() {
-      let topVal = getRandValue(-(window.innerHeight), window.innerHeight);
-      let leftVal = getRandValue(-(window.innerHeight), window.innerWidth);
+      let topVal = getRandValue(-window.innerHeight, window.innerHeight);
+      let leftVal = getRandValue(-window.innerHeight, window.innerWidth);
       seconds--;
       time.innerHTML = seconds;
       if (seconds == 0) {
@@ -50,11 +54,16 @@ function doIt() {
     for (let i = 0; i < reactionTimes.length; i++) {
       sum += reactionTimes[i];
     }
-    localStorage.setItem("averageTime", Math.trunc(sum/5, 1));
-    const resultMessage = `Your average reaction time is ${localStorage.getItem("averageTime")/5} ms.`;
+    averageTime = Math.trunc(sum/5);
+    const resultMessage = `Your average reaction time is ${averageTime} ms.`;
     playAgain.style.visibility = "hidden";
+    restart.style.display = "block";
+    restart.style.marginTop = "-136px";
     finalTime.innerHTML = resultMessage;
     finalTime.style.fontFamily = "Georgia";
+    finalTime.style.marginTop = "-200px";
+    table.style.display = "block";
+    table.style.marginTop = "100px";
   }
 }
 function getRandValue(min, max) {
