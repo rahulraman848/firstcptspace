@@ -1,48 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>QuickReact</title>
-        <link rel="icon" href="logo.png">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>QuickReact</title>
+    <link rel="icon" href="logo.png" />
+  </head>
 
-    <body>
-        <section>
-            
-            <div class="center">
-                <button id="playAgain" onclick="doIt()">Play Again</button>
-            </div>
-            
-            <p id="instructions">
-                Welcome to QuickReact! To get started, click on the button below.
-                When you click it, a countdown of 3 seconds will start. At the end
-                of those three seconds, a button will appear. You must click the button 
-                as soon as you can to register the fastest reaction time. After doing that, 
-                click play again. The program will have you play a total of 5 times, and will 
-                give you your average reaction time across the 5 tries at the end. Good luck!
-            </p>
+  <body>
+    <section>
+      <div class="center">
+        <button id="playAgain" onclick="doIt()">Play Again</button>
+      </div>
 
-            <div class="center">
-                <button id="myButton" onclick="doIt();">
-                    CLICK TO START
-                </button>
-            </div>
-    
-            <div class="center">
-                <h1></h1>
-            </div>
+      <p id="instructions">
+        Welcome to QuickReact! To get started, click on the button below. When
+        you click it, a countdown of 3 seconds will start. At the end of those
+        three seconds, a button will appear. You must click the button as soon
+        as you can to register the fastest reaction time. After doing that,
+        click play again. The program will have you play a total of 5 times, and
+        will give you your average reaction time across the 5 tries at the end.
+        Good luck!
+      </p>
 
-            <button id="shape" onclick="reaction()"></button>
+      <div class="center">
+        <button id="myButton" onclick="doIt();">CLICK TO START</button>
+      </div>
 
-            <div class="center">
-                <h2 id="results"></h2>
-            </div>
+      <div class="center">
+        <h1></h1>
+      </div>
 
-        </section>
+      <button id="shape" onclick="reaction()"></button>
 
-        <script src="ReactionTime.js"></script>
-    </body>
+      <div class="center">
+        <h2 id="results"></h2>
+      </div>
+
+      <div class="center">
+        <table id="table">
+          <style>
+            table,
+            th,
+            td {
+              border: 1px solid;
+            }
+            tr:hover{
+                cursor: grab;
+            }
+            #verygood:hover {
+              background-color: rgb(4, 125, 8);
+            }
+            #good:hover{
+                background-color: rgb(4, 181, 4)
+            }
+            #normal:hover{
+                background-color:lightgreen;
+            }
+            #subpar:hover{
+                background-color: lightsalmon;
+            }
+            #bad:hover{
+                background-color: rgb(243, 35, 35);
+            }
+          </style>
+          <tr>
+            <th>Ranking</th>
+            <th>Average Time</th>
+          </tr>
+          <tr id="verygood">
+            <td>Very Good</td>
+            <td><800 ms</td>
+          </tr>
+          <tr id="good">
+            <td>Good</td>
+            <td>800-850 ms</td>
+          </tr>
+          <tr id="normal">
+            <td>Normal</td>
+            <td>850-920 ms</td>
+          </tr>
+          <tr id="subpar">
+            <td>Subpar</td>
+            <td>930-1400 ms</td>
+          </tr>
+          <tr id="bad">
+            <td>Bad</td>
+            <td>>1400 ms</td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="center">
+        <button id="restart" onclick="location.reload()">Play Again!</button>
+      </div>
+
+    </section>
+
+    <script src="ReactionTime.js"></script>
+  </body>
 </html>
