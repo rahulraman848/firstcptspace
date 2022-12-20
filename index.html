@@ -12,7 +12,7 @@
   <body>
     <section>
       <div class="center">
-        <button id="playAgain" onclick="doIt()">Play Again</button>
+        <button id="playAgain" onclick="main()">Play Again</button>
       </div>
 
       <p id="instructions">
@@ -26,7 +26,7 @@
       </p>
 
       <div class="center">
-        <button id="myButton" onclick="doIt();">CLICK TO START</button>
+        <button id="myButton" onclick="main();">CLICK TO START</button>
       </div>
 
       <div class="center">
@@ -47,31 +47,13 @@
             td {
               border: 1px solid;
             }
-            tr:hover{
-                cursor: grab;
-            }
-            #verygood:hover {
-              background-color: rgb(4, 125, 8);
-            }
-            #good:hover{
-                background-color: rgb(4, 181, 4)
-            }
-            #normal:hover{
-                background-color:lightgreen;
-            }
-            #subpar:hover{
-                background-color: lightsalmon;
-            }
-            #bad:hover{
-                background-color: rgb(243, 35, 35);
-            }
           </style>
           <tr>
-            <th>Ranking</th>
-            <th>Average Time</th>
+            <th style="padding: 8px">Ranking</th>
+            <th style="padding: 8px">Average Time</th>
           </tr>
           <tr id="verygood">
-            <td>Very Good</td>
+            <td style="padding: 3px">Very Good</td>
             <td><800 ms</td>
           </tr>
           <tr id="good">
@@ -84,10 +66,10 @@
           </tr>
           <tr id="subpar">
             <td>Subpar</td>
-            <td>930-1400 ms</td>
+            <td>920-1400 ms</td>
           </tr>
           <tr id="bad">
-            <td>Bad</td>
+            <td style="padding:8px">Bad</td>
             <td>>1400 ms</td>
           </tr>
         </table>

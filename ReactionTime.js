@@ -14,13 +14,18 @@ const table = document.getElementById("table");
 table.style.display = "none";
 const restart = document.getElementById("restart");
 restart.style.display = "none";
+const verygood = document.getElementById("verygood");
+const good = document.getElementById("good");
+const normal = document.getElementById("normal");
+const subpar = document.getElementById("subpar");
+const bad = document.getElementById("bad");
 
 function remove() {
   button.style.display = "none";
   instructions.style.display = "none";
 }
 
-function doIt() {
+function main() {
   if (attempts < 5) {
     playAgain.style.visibility = "hidden";
     let time = document.querySelector("h1");
@@ -28,7 +33,7 @@ function doIt() {
 
     time.innerHTML = seconds;
 
-    let countdown = setInterval(clock, 1000);
+    let countdown = setInterval(clock, 1000); //Credit to Thapa Technical on Youtube
 
     function clock() {
       let topVal = getRandValue(-window.innerHeight, window.innerHeight);
@@ -38,7 +43,7 @@ function doIt() {
       if (seconds == 0) {
         clearInterval(countdown);
         time.innerHTML = "Go!";
-        setTimeout(() => {
+        setTimeout(() => { // Credit to W3Schoolss
           time.innerHTML = "";
         }, 700);
         setTimeout(() => {
@@ -64,10 +69,25 @@ function doIt() {
     finalTime.style.marginTop = "-200px";
     table.style.display = "block";
     table.style.marginTop = "100px";
+    if(averageTime < 800){
+      verygood.style.backgroundColor = "rgb(4, 125, 8)";
+    }
+    if(averageTime >= 800 && averageTime < 850){
+      good.style.backgroundColor = "rgb(4, 181, 4)";
+    }
+    if(averageTime >= 850 && averageTime < 920){
+      normal.style.backgroundColor = "lightgreen";
+    }
+    if(averageTime >= 920 && averageTime < 1400){
+      subpar.style.backgroundColor = "lightsalmon";
+    }
+    if(averageTime >= 1400){
+      bad.style.backgroundColor = "rgb(243, 35, 35)";
+    }
   }
 }
 function getRandValue(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min; //Credit to W3Schools
 }
 function reaction() {
   attempts++;
